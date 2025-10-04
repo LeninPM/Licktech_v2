@@ -1,3 +1,16 @@
+/* Fondo y cuadro para la descripción del portafolio */
+.portfolio-desc-bg {
+    background: linear-gradient(135deg, rgba(3,250,110,0.18) 0%, rgba(0,0,0,0.85) 100%);
+    box-shadow: 0 2px 12px rgba(3,250,110,0.10);
+    border: 1.5px solid #232323;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
 
         :root {
             --bg-primary: #000000;
@@ -207,7 +220,7 @@
         }
 
         .hero {
-            padding-top: 80px;
+            padding-top: 90px;
             min-height: 100vh;
             display: flex;
             align-items: center;
