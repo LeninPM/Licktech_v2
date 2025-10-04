@@ -51,9 +51,11 @@
         const contactForm = document.querySelector('.contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-                contactForm.reset();
+                // No preventDefault para que Netlify maneje el envío
+                // El formulario se enviará automáticamente a Netlify
+                setTimeout(() => {
+                    alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+                }, 1000);
             });
         }
 
