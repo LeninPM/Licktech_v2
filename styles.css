@@ -108,7 +108,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 0.3rem 0;
+            padding: 0.1rem 0;
             background-color: var(--bg-primary);
             /* Mismo color del hero */
             z-index: 1000;
@@ -133,7 +133,7 @@
         .logo {
             display: flex;
             align-items: center;
-            height: 90px;
+            height: 75px;
         }
 
         .logo img {
@@ -306,7 +306,9 @@
         .carousel-container {
             position: relative;
             overflow: hidden;
-            padding: 0 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
 
         .carousel-track {
@@ -323,7 +325,8 @@
         }
 
         .carousel-slide img {
-            max-width: 100%;
+            max-width: 75%;
+            max-height: 70px;
             filter: grayscale(100%);
             opacity: 0.7;
             transition: var(--transition);
@@ -471,10 +474,14 @@
         }
 
         .portfolio-item {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             border-radius: 8px;
             overflow: hidden;
-            aspect-ratio: 16/9;
+            aspect-ratio: 16/11;
+            background: #111;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: var(--transition);
         }
 
@@ -485,9 +492,24 @@
 
         .portfolio-img {
             width: 100%;
-            height: 100%;
+            max-width: 350px;
+            height: 200px;
             object-fit: cover;
+            border-bottom: 1px solid #222;
             transition: var(--transition);
+        .portfolio-info {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        .portfolio-info h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .portfolio-info p {
+            color: #cccccc;
+            margin-bottom: 0;
+        }
         }
 
         .portfolio-overlay {
