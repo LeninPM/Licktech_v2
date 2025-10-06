@@ -1,0 +1,221 @@
+/* Nuevos estilos para mejorar el diseño */
+
+/* Efectos y animaciones */
+.pulse-effect {
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 71, 87, 0);
+    }
+}
+
+/* Botón CTA Principal */
+.btn.cta-primario {
+    background: linear-gradient(45deg, #FF4757, #FF6B81);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.btn.cta-primario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+    background: linear-gradient(45deg, #FF6B81, #FF4757);
+}
+
+/* Hero Guarantee */
+.hero-guarantee {
+    margin-top: 1.5rem;
+    color: #2ecc71;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-guarantee i {
+    color: #2ecc71;
+}
+
+/* Mejoras en la sección hero */
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #2d3436, #636e72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content .accent-text {
+    background: linear-gradient(45deg, #FF4757, #FF6B81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #636e72;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-benefits {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.hero-benefits li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.hero-benefits li i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FF4757;
+}
+
+.hero-benefits li strong {
+    color: #FF4757;
+    font-weight: 700;
+}
+
+/* Servicios mejorados */
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-metrics {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.metric {
+    background: #f1f2f6;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #2d3436;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.metric i {
+    color: #FF4757;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.service-features li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: #636e72;
+}
+
+.service-features li:before {
+    content: "✓";
+    color: #2ecc71;
+    position: absolute;
+    left: 0;
+}
+
+.service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #FF4757;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-cta:hover {
+    gap: 1rem;
+    color: #ff6b81;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #FF4757, #FF6B81);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.service-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn.cta-primario {
+        width: 100%;
+    }
+}
