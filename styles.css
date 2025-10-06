@@ -1,3 +1,184 @@
+/* Confianza y Legal */
+.legal-trust {
+    background: var(--bg-secondary);
+    padding: 4rem 0 3rem 0;
+    border-top: 1.5px solid #232323;
+}
+.legal-trust h2 {
+    text-align: center;
+    color: var(--text-accent);
+    margin-bottom: 2.5rem;
+}
+.trust-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+.trust-item {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(3,250,110,0.10);
+    border: 1.5px solid #232323;
+    padding: 1.5rem 2rem;
+    max-width: 320px;
+    text-align: center;
+    color: #fff;
+}
+.trust-badge {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px;
+}
+.legal-links {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #aaa;
+}
+.legal-links a {
+    color: var(--text-accent);
+    margin: 0 0.5rem;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+.social-proof {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.social-proof a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.social-proof a:hover {
+    color: var(--text-accent);
+}
+/* Blog y Recursos */
+.blog {
+    background: var(--bg-primary);
+    padding: 5rem 0 4rem 0;
+}
+.blog h2 {
+    text-align: center;
+    color: var(--text-accent);
+    margin-bottom: 3rem;
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+}
+.blog-card {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(3,250,110,0.10), 0 1.5px 6px rgba(0,0,0,0.10);
+    border: 1.5px solid #232323;
+    padding: 2rem 2rem 1.5rem 2rem;
+    max-width: 370px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px;
+}
+.blog-card h3 {
+    color: var(--text-accent);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.blog-card p {
+    color: #e0e0e0;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+/* Lead magnet y CTA llamativo */
+.lead-magnet {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-accent);
+    margin-bottom: 2rem;
+    margin-top: -1.5rem;
+}
+.cta-llamativo {
+    background: linear-gradient(90deg, #03FA6E 0%, #00c37a 100%);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 16px rgba(3,250,110,0.13);
+    transition: background 0.2s, color 0.2s;
+}
+.cta-llamativo:hover {
+    background: linear-gradient(90deg, #00c37a 0%, #03FA6E 100%);
+    color: #fff;
+}
+/* Testimonios y Casos de Éxito */
+.testimonials {
+    background: var(--bg-secondary);
+    padding: 5rem 0 4rem 0;
+}
+.testimonials h2 {
+    text-align: center;
+    color: var(--text-accent);
+    margin-bottom: 3rem;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+}
+.testimonial-card {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(3,250,110,0.10), 0 1.5px 6px rgba(0,0,0,0.10);
+    border: 1.5px solid #232323;
+    padding: 2rem 2rem 1.5rem 2rem;
+    max-width: 370px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+}
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.testimonial-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+    padding: 4px;
+    box-shadow: 0 1px 4px rgba(3,250,110,0.07);
+}
+.testimonial-card blockquote {
+    font-size: 1.08rem;
+    font-style: italic;
+    margin: 0 0 1.2rem 0;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+.testimonial-metric {
+    margin-top: auto;
+    font-weight: bold;
+    color: var(--text-accent);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 /* Fondo y cuadro para la descripción del portafolio */
 .portfolio-desc-bg {
     background: linear-gradient(135deg, rgba(3,250,110,0.18) 0%, rgba(0,0,0,0.85) 100%);
@@ -150,7 +331,12 @@
         }
 
         .logo img {
-            height: 100%;
+            height: 70%;
+            width: auto;
+        }
+        
+        .footer-logo img {
+            height: 90px;
             width: auto;
         }
 
