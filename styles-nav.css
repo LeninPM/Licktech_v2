@@ -9,12 +9,12 @@
 }
 
 .header-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     align-items: center;
+    gap: 1rem;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
 }
 
 .logo img {
@@ -23,7 +23,9 @@
 }
 
 nav#nav {
-    justify-self: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 nav#nav ul {
@@ -32,6 +34,8 @@ nav#nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    margin-left: auto;
+    margin-right: auto; /* centers the ul inside nav */
 }
 
 nav#nav ul li a {
@@ -59,7 +63,16 @@ nav#nav ul li a:hover::after {
 }
 
 .nav-cta {
-    margin-left: auto;
+    margin-left: 0.75rem;
+    background: var(--primary);
+    color: var(--text-dark);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.nav-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(3,250,110,0.18);
 }
 
 /* Espaciado entre secciones */
