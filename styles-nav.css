@@ -1,0 +1,194 @@
+/* Navbar mejorado */
+#header {
+    background: var(--bg-darker);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav#nav {
+    justify-self: center;
+}
+
+nav#nav ul {
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav#nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav#nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+nav#nav ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    margin-left: auto;
+}
+
+/* Espaciado entre secciones */
+.section-spacing {
+    padding: 4rem 0;
+}
+
+/* Estilos del hero con degradado */
+.hero {
+    background: linear-gradient(to bottom, var(--bg-darker) 0%, var(--bg-dark) 100%);
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px; /* Espacio para el navbar fijo */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(3, 250, 110, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Carrusel de marcas */
+.brands-carousel {
+    background-color: var(--bg-darker);
+    padding: 4rem 0;
+    position: relative;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 4rem;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+    min-width: 200px;
+    padding: 1rem;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(150%);
+    transition: all 0.3s ease;
+}
+
+.carousel-slide:hover img {
+    filter: grayscale(0%) brightness(100%);
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: var(--primary);
+    color: var(--text-dark);
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 1rem;
+    }
+    
+    nav#nav ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        grid-template-columns: auto auto;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav#nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        background: var(--bg-darker);
+        flex-direction: column;
+        padding: 2rem;
+        transition: right 0.3s ease;
+    }
+    
+    nav#nav.active {
+        right: 0;
+    }
+    
+    nav#nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
