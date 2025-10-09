@@ -1,0 +1,121 @@
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-accent: #03FA6E;
+    --border-color: #1a1a1a;
+    --transition: all 0.3s ease;
+    --space: 10px;
+    /* base spacing */
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased
+}
+
+/* Layout container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem
+}
+
+/* Section spacing utility */
+section {
+    padding: calc(var(--space) * 8) 0
+}
+
+/* Headings */
+h1 {
+    font-size: 3.2rem;
+    line-height: 1.05;
+    margin-bottom: 1rem
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: .75rem
+}
+
+p {
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.7
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none
+}
+
+.btn.primary {
+    background: var(--text-accent);
+    color: #000;
+    font-weight: 700;
+    border: none
+}
+
+.btn:focus {
+    outline: 3px solid rgba(3, 250, 110, 0.12);
+    outline-offset: 3px
+}
+
+/* Small utilities */
+.muted {
+    color: rgba(255, 255, 255, 0.6)
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap
+}
+
+/* Minimal responsive tweaks */
+@media (max-width:900px) {
+    .container {
+        padding: 0 1.25rem
+    }
+
+    h1 {
+        font-size: 2.4rem
+    }
+}
+
+@media (max-width:576px) {
+    h1 {
+        font-size: 1.8rem
+    }
+
+    section {
+        padding: calc(var(--space) * 6) 0
+    }
+}
+
+/* End of base/core styles - section-specific rules live in css/{header,hero,portfolio,components,footer,about,services,contact,responsive}.css */

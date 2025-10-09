@@ -1,0 +1,24 @@
+/* Responsive overrides */
+@media (max-width: 900px) {
+    .about-hero {
+        grid-template-columns: 1fr
+    }
+
+    .our-services .services-grid {
+        grid-template-columns: 1fr
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        padding: 1rem
+    }
+
+    .hero .hero-grid {
+        gap: 1.5rem
+    }
+}

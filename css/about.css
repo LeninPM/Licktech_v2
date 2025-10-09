@@ -1,0 +1,41 @@
+/* ==== ABOUT ==== */
+.about {
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+    color: var(--text-primary);
+    padding: 6rem 0;
+}
+
+.about h2 {
+    text-align: center;
+    color: var(--text-accent);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.85);
+}
+
+.about-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

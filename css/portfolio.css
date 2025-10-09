@@ -1,0 +1,109 @@
+/* Portfolio section styles */
+.portfolio {
+    background-color: var(--bg-primary)
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #0d0d0d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: var(--transition)
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(3, 250, 110, 0.2)
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block
+}
+
+.portfolio-info {
+    padding: 1.6rem 1.25rem;
+    text-align: left
+}
+
+.portfolio-info h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.45rem;
+    font-size: 1.05rem
+}
+
+.portfolio-desc {
+    color: #cfcfcf;
+    margin-bottom: 0.85rem;
+    font-size: 1rem;
+    line-height: 1.6
+}
+
+.portfolio-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+    flex-wrap: wrap
+}
+
+.portfolio-tag {
+    background: rgba(3, 250, 110, 0.08);
+    color: var(--text-accent);
+    padding: 0.32rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600
+}
+
+.portfolio-cta {
+    background: var(--text-accent);
+    color: var(--bg-primary);
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.93rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    text-decoration: none
+}
+
+@media (max-width:900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+    }
+
+    .portfolio-item {
+        min-height: 260px
+    }
+
+    .portfolio-img {
+        height: 140px
+    }
+
+    .portfolio-info {
+        padding: 1.2rem 1rem 1.6rem 1rem
+    }
+}
+
+/* small utility for description under image */
+.portfolio-description {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: .5rem
+}
+
+.portfolio-grid {
+    gap: 1.25rem
+}

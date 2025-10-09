@@ -1,0 +1,264 @@
+/* Carousel, trust badges, blog cards, testimonials, and small components */
+.brands-carousel {
+    background-color: var(--bg-secondary);
+    padding: 2rem 0
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease
+}
+
+.carousel-slide {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem
+}
+
+.carousel-slide img {
+    max-width: 75%;
+    max-height: 70px;
+    filter: grayscale(100%);
+    opacity: .7;
+    transition: var(--transition)
+}
+
+.carousel-slide img:hover {
+    filter: grayscale(0);
+    opacity: 1
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(3, 250, 110, 0.2);
+    border: none;
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10
+}
+
+.carousel-btn:hover {
+    background: rgba(3, 250, 110, 0.4)
+}
+
+.carousel-btn.prev {
+    left: 0
+}
+
+.carousel-btn.next {
+    right: 0
+}
+
+/* Trust inline */
+.trust-inline {
+    background: transparent;
+    padding: calc(var(--space)*6) 0
+}
+
+.trust-inline-grid {
+    display: flex;
+    gap: calc(var(--space)*6);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 920px;
+    margin: 0 auto;
+    width: 100%
+}
+
+.trust-inline-item {
+    display: flex;
+    gap: calc(var(--space)*1.5);
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+    padding: calc(var(--space)*2) calc(var(--space)*3);
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    min-width: 180px;
+    box-sizing: border-box;
+    transition: transform .22s ease, box-shadow .22s
+}
+
+.trust-inline-item i {
+    color: var(--text-accent);
+    font-size: 1.35rem;
+    width: 28px;
+    text-align: center
+}
+
+.trust-inline-item span {
+    font-size: .95rem;
+    color: var(--text-primary)
+}
+
+.trust-inline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(3, 250, 110, 0.12)
+}
+
+.trust-inline-item:focus {
+    outline: 3px solid rgba(3, 250, 110, 0.18);
+    outline-offset: 4px
+}
+
+.trust-inline-item:focus,
+.trust-inline-item:focus-visible {
+    transform: scale(1.05);
+    box-shadow: 0 10px 28px rgba(3, 250, 110, 0.14)
+}
+
+/* Blog cards */
+.blog {
+    background: var(--bg-primary);
+    padding-top: calc(var(--space)*10);
+    padding-bottom: calc(var(--space)*10)
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    justify-items: center
+}
+
+.blog-card {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(3, 250, 110, 0.10), 0 1.5px 6px rgba(0, 0, 0, 0.10);
+    border: 1.5px solid #232323;
+    padding: 2rem 2rem 1.5rem 2rem;
+    max-width: 370px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px
+}
+
+.blog-card h3 {
+    color: var(--text-accent);
+    margin-bottom: 1rem;
+    font-size: 1.2rem
+}
+
+.blog-card p {
+    color: #e0e0e0;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem
+}
+
+/* Testimonials */
+.testimonials {
+    background: var(--bg-secondary);
+    padding-top: calc(var(--space)*10);
+    padding-bottom: calc(var(--space)*10)
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: var(--text-accent);
+    margin-bottom: 3rem
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    justify-items: center
+}
+
+.testimonial-card {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(3, 250, 110, 0.10), 0 1.5px 6px rgba(0, 0, 0, 0.10);
+    border: 1.5px solid #232323;
+    padding: 2rem 2rem 1.5rem 2rem;
+    max-width: 370px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem
+}
+
+.testimonial-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+    padding: 4px;
+    box-shadow: 0 1px 4px rgba(3, 250, 110, 0.07)
+}
+
+.testimonial-card blockquote {
+    font-size: 1.08rem;
+    font-style: italic;
+    margin: 0 0 1.2rem 0;
+    color: #e0e0e0;
+    line-height: 1.5
+}
+
+.testimonial-metric {
+    margin-top: auto;
+    font-weight: bold;
+    color: var(--text-accent);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+/* WhatsApp float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: var(--transition)
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6)
+}
