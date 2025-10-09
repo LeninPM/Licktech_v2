@@ -1,0 +1,83 @@
+/* ===== Página de Agradecimiento ===== */
+body.gracias {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #0a0a0a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fondo con efecto de partículas suaves */
+body.gracias::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(0, 255, 102, 0.2) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(0, 255, 102, 0.15) 0%, transparent 40%);
+  z-index: 0;
+  animation: pulse 6s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  from { opacity: 0.4; transform: scale(1); }
+  to { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Contenedor del mensaje */
+.gracias h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #00ff66;
+  letter-spacing: 1px;
+  z-index: 1;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.gracias p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 600px;
+  line-height: 1.6;
+  z-index: 1;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón de regreso al inicio (opcional) */
+.gracias a.volver {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: #00ff66;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.gracias a.volver:hover {
+  background: #00cc55;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+}
